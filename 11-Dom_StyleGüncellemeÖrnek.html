@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Style Güncelleme</title>
+ <style>
+ .yeni-sinif {
+ color: red;
+ font-weight: bold;
+ }
+ .aktif {
+ background-color: yellow;
+ }
+ .pasif {
+ background-color: gray;
+ }
+ </style>
+</head>
+<body>
+ <h1 id="baslik">Merhaba Dünya!</h1>
+ <p id="paragraf">Bu bir paragraftır.</p>
+ <div id="kutu" class="pasif">Bu bir
+kutudur.</div>
+ <button onclick="stilGuncelle()">Stilleri
+Güncelle</button>
+ <script>
+ function stilGuncelle() {
+ let baslik =
+document.getElementById("baslik");
+ baslik.style.color = "blue";
+ baslik.style.fontSize = "24px";
+ let paragraf =
+document.getElementById("paragraf");
+ paragraf.className = "yeni-sinif";
+ let kutu =
+document.getElementById("kutu");
+ kutu.classList.add("aktif");
+ kutu.classList.remove("pasif");
+ }
+ </script>
+</body>
+</html>

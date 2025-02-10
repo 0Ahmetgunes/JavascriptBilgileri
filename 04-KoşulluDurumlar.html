@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Koşullu Durumlar Örneği</title>
+</head>
+<body>
+ <h1>JavaScript Koşullu Durumlar</h1>
+ <script>
+ // if/else if/else koşullu durumu
+ let sayi = 10;
+ if (sayi > 0) {
+     console.log("Sayı pozitiftir.");
+ } else if (sayi < 0) {
+     console.log("Sayı negatiftir.");
+ } else {
+     console.log("Sayı sıfırdır.");
+ }
+
+ // switch/case koşullu durumu
+ let gun = 3;
+ switch (gun) {
+     case 1:
+         console.log("Pazartesi");
+         break;
+     case 2:
+         console.log("Salı");
+         break;
+     case 3:
+         console.log("Çarşamba");
+         break;
+     case 4:
+         console.log("Perşembe");
+         break;
+     case 5:
+         console.log("Cuma");
+         break;
+     case 6:
+         console.log("Cumartesi");
+         break;
+     case 7:
+         console.log("Pazar");
+         break;
+     default:
+         console.log("Geçersiz gün");
+         break;
+ }
+ </script>
+</body>
+</html>

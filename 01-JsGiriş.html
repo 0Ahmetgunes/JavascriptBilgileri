@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Örneği</title>
+</head>
+<body>
+ <h1 id="baslik">Merhaba Dünya!</h1>
+ <button onclick="degistir()">Metni Değiştir</button>
+ <script>
+ // degistir fonksiyonu tanımlanıyor
+ function degistir() {
+     // getElementById metodu ile "baslik" id'li HTML elemanı seçiliyor
+     // innerHTML özelliği kullanılarak elemanın içeriği değiştiriliyor
+     document.getElementById("baslik").innerHTML = "JavaScript ile Merhaba!";
+ }
+ </script>
+
+<!-- Scritp sayfasına baglama -->
+ <script src="script.js"></script>
+</body>
+</html>

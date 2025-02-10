@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Olaylar Örneği</title>
+</head>
+<body>
+ <button id="buton">Butona Tıkla</button>
+ <img id="resim" src="resim.jpg" alt="Resim" style="width:200px;">
+ <form id="form">
+     <input type="text" name="isim" placeholder="İsminizi girin">
+     <button type="submit">Gönder</button>
+ </form>
+
+ <script>
+ // "buton" id'li HTML elemanına tıklama olayı ekleme
+ let buton = document.getElementById("buton");
+ buton.addEventListener("click", function() {
+     alert("Butona tıklandı!");
+ });
+
+ // "resim" id'li HTML elemanına fare üzerine gelme olayı ekleme
+ let resim = document.getElementById("resim");
+ resim.addEventListener("mouseover", function() {
+     resim.style.border = "2px solid red";
+ });
+
+ // Belgeye klavye tuşuna basma olayı ekleme
+ document.addEventListener("keydown", function(event) {
+     console.log("Basılan tuş: " + event.key);
+ });
+
+ // "form" id'li HTML elemanına form gönderme olayı ekleme
+ let form = document.getElementById("form");
+ form.addEventListener("submit", function(event) {
+     event.preventDefault(); // Formun varsayılan gönderme işlemini engeller
+     alert("Form gönderildi!");
+ });
+ </script>
+</body>
+</html>

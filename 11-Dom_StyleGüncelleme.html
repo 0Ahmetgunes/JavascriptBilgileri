@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Style Güncelleme Örneği</title>
+ <style>
+     .aktif {
+         background-color: green;
+         color: white;
+     }
+     .pasif {
+         background-color: red;
+         color: black;
+     }
+ </style>
+</head>
+<body>
+ <h1 id="baslik">Başlık</h1>
+ <div id="kutu" class="pasif">Bu bir kutudur.</div>
+ <script>
+ // "baslik" id'li HTML elemanını seçip stil özelliklerini değiştirme
+ let baslik = document.getElementById("baslik");
+ baslik.style.color = "blue";
+ baslik.style.fontSize = "24px";
+
+ // "kutu" id'li HTML elemanını seçip sınıfını değiştirme
+ let kutu = document.getElementById("kutu");
+ kutu.classList.add("aktif");
+ kutu.classList.remove("pasif");
+ </script>
+</body>
+</html>

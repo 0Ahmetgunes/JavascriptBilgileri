@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Nesneler Örneği</title>
+</head>
+<body>
+ <h1>JavaScript Nesneler</h1>
+ <script>
+ // Nesne tanımlama
+ let kisi = {
+     isim: "Alice",
+     yas: 30,
+     meslek: "Mühendis",
+     selamVer: function() {
+         console.log("Merhaba, ben " + this.isim);
+     }
+ };
+
+ // Nesne özelliklerini konsola yazdırma
+ console.log(kisi.isim); // Çıktı: Alice
+ console.log(kisi["yas"]); // Çıktı: 30
+ kisi.selamVer(); // Çıktı: Merhaba, ben Alice
+ </script>
+</body>
+</html>

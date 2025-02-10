@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Events</title>
+</head>
+<body>
+ <button id="buton">Tıkla</button>
+ <img id="resim" src="resim.jpg" alt="Örnek
+Resim">
+ <form id="form">
+ <input type="text" name="isim"
+placeholder="İsminizi girin">
+ <button type="submit">Gönder</button>
+ </form>
+ <script>
+ let buton =
+document.getElementById("buton");
+ buton.addEventListener("click", function()
+{
+ alert("Butona tıklandı!");
+ });
+ let resim =
+document.getElementById("resim");
+ resim.addEventListener("mouseover",
+function() {
+ resim.style.border = "2px solid red";
+ });
+ document.addEventListener("keydown",
+function(event) {
+ console.log("Basılan tuş: " + event.key);
+ });
+ let form =
+document.getElementById("form");
+ form.addEventListener("submit",
+function(event) {
+ event.preventDefault();
+ alert("Form gönderildi!");
+ });
+ </script>
+</body>
+</html>

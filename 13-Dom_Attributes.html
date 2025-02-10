@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Attributes Örneği</title>
+</head>
+<body>
+ <a id="link" href="https://www.orijinaladres.com">Orijinal Adres</a>
+ <img id="resim" src="resim.jpg" alt="Resim Açıklaması">
+ <button id="buton" disabled>Buton</button>
+
+ <script>
+ // "link" id'li HTML elemanının "href" attribute değerini alma
+ let link = document.getElementById("link");
+ let hrefDegeri = link.getAttribute("href");
+ console.log(hrefDegeri); // Çıktı: https://www.orijinaladres.com
+
+ // "link" id'li HTML elemanının "href" attribute değerini değiştirme
+ link.setAttribute("href", "https://www.yeniadres.com");
+
+ // "resim" id'li HTML elemanının "alt" attribute değerini kaldırma
+ let resim = document.getElementById("resim");
+ resim.removeAttribute("alt");
+
+ // "buton" id'li HTML elemanının "disabled" attribute değerini kontrol etme
+ let buton = document.getElementById("buton");
+ if (buton.hasAttribute("disabled")) {
+     console.log("Buton devre dışı."); // Çıktı: Buton devre dışı.
+ } else {
+     console.log("Buton aktif.");
+ }
+ </script>
+</body>
+</html>

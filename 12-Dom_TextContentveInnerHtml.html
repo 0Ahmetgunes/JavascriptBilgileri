@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM textContent ve innerHTML Örneği</title>
+</head>
+<body>
+ <h1 id="baslik">Başlık</h1>
+ <p id="paragraf">Bu bir paragraftır.</p>
+ <script>
+ // "baslik" id'li HTML elemanını seçip textContent özelliğini değiştirme
+ let baslik = document.getElementById("baslik");
+ baslik.textContent = "Yeni Başlık";
+ console.log(baslik.textContent);
+
+ // "paragraf" id'li HTML elemanını seçip innerHTML özelliğini değiştirme
+ let paragraf = document.getElementById("paragraf");
+ paragraf.innerHTML = "<strong>Güncellenmiş</strong> Paragraf";
+ console.log(paragraf.innerHTML);
+ </script>
+</body>
+</html>

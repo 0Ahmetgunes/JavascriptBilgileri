@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Attributes</title>
+</head>
+<body>
+ <a id="link"
+href="https://www.example.com">Örnek
+Link</a>
+ <img id="resim" src="resim.jpg" alt="Örnek
+Resim">
+ <button id="buton"
+disabled>Buton</button>
+ <button
+onclick="ozellikleriGuncelle()">Özellikleri
+Güncelle</button>
+ <script>
+ function ozellikleriGuncelle() {
+ let link =
+document.getElementById("link");
+ link.setAttribute("href",
+"https://www.yeniadres.com");
+ let resim =
+document.getElementById("resim");
+ resim.removeAttribute("alt");
+ let buton =
+document.getElementById("buton");
+ if (buton.hasAttribute("disabled")) {
+ buton.removeAttribute("disabled");
+ } else {
+ buton.setAttribute("disabled", "true");
+ }
+ }
+ </script>
+</body>
+</html>

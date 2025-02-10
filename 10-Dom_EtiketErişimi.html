@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>DOM Etiket Erişimi Örneği</title>
+</head>
+<body>
+ <h1 id="baslik">Başlık</h1>
+ <p class="paragraf">Bu bir paragraftır.</p>
+ <p class="paragraf">Bu başka bir paragraftır.</p>
+ <ul>
+     <li>Liste Elemanı 1</li>
+     <li>Liste Elemanı 2</li>
+ </ul>
+ <script>
+ // "baslik" id'li HTML elemanını seçip içeriğini değiştirme
+ let baslik = document.getElementById("baslik");
+ baslik.innerHTML = "Yeni Başlık";
+
+ // "paragraf" sınıfına sahip ilk HTML elemanını seçip rengini değiştirme
+ let paragraflar = document.getElementsByClassName("paragraf");
+ paragraflar[0].style.color = "blue";
+
+ // "ul" etiketine sahip ilk HTML elemanını seçip arka plan rengini değiştirme
+ let listeler = document.getElementsByTagName("ul");
+ listeler[0].style.backgroundColor = "yellow";
+
+ // "paragraf" sınıfına sahip ilk HTML elemanını seçip yazı boyutunu değiştirme
+ let ilkParagraf = document.querySelector(".paragraf");
+ ilkParagraf.style.fontSize = "20px";
+
+ // "paragraf" sınıfına sahip tüm HTML elemanlarını seçip kenar boşluklarını değiştirme
+ let tumParagraflar = document.querySelectorAll(".paragraf");
+ tumParagraflar.forEach(paragraf => {
+     paragraf.style.margin = "10px";
+ });
+ </script>
+</body>
+</html>
